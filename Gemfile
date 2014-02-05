@@ -5,10 +5,15 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
-group :development do
+group :development, :test do
   # Use mysql2 as the database for Active Record
   gem 'mysql2'
   gem 'rspec-rails'
+  gem 'capybara'
+  gem 'pry'
+  gem 'pry-debugger'
+  gem 'hirb'
+  gem 'hirb-unicode'
 end
 
 group :assets do
@@ -20,10 +25,6 @@ group :assets do
 
   # Use CoffeeScript for .js.coffee assets and views
   gem 'coffee-rails', '~> 4.0.0'
-end
-
-group :test do
-  gem 'capybara'
 end
 
 group :production do
