@@ -5,10 +5,15 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
-group :development do
+group :development, :test do
   # Use mysql2 as the database for Active Record
-  gem 'mysql2'
-  gem 'rspec-rails'
+  # gem 'mysql2'
+  gem 'sqlite3'
+  gem 'rspec-rails', '2.13.1'
+  gem 'guard-rspec', '2.5.0'
+  gem 'spork-rails', '4.0.0'
+  gem 'guard-spork', '1.5.0'
+  gem 'childprocess', '0.3.6'
 end
 
 group :assets do
@@ -23,11 +28,12 @@ group :assets do
 end
 
 group :test do
-  gem 'capybara'
+  gem 'capybara', '2.1.0'
+  gem 'selenium-webdriver', '2.35.1'
 end
 
 group :production do
-  gem 'pg'
+  gem 'pg', '0.15.1'
 end
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
