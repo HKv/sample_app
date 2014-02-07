@@ -7,13 +7,17 @@ gem 'rails', '4.0.2'
 
 group :development, :test do
   # Use mysql2 as the database for Active Record
-  # gem 'mysql2'
-  gem 'sqlite3'
+  gem 'mysql2'
   gem 'rspec-rails', '2.13.1'
   gem 'guard-rspec', '2.5.0'
   gem 'spork-rails', '4.0.0'
   gem 'guard-spork', '1.5.0'
   gem 'childprocess', '0.3.6'
+  gem 'capybara', '2.1.0'
+  gem 'pry'
+  gem 'pry-debugger'
+  gem 'hirb'
+  gem 'hirb-unicode'
 end
 
 group :assets do
@@ -59,7 +63,7 @@ end
 # Use unicorn as the app server
 # gem 'unicorn'
 
-# Use Capistrano for deployment
+# Use Caistrano for deployment
 # gem 'capistrano', group: :development
 
 # Use debugger
